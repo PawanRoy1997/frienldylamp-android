@@ -1,6 +1,9 @@
+import com.android.build.gradle.internal.utils.isKotlinKaptPluginApplied
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -37,7 +40,18 @@ android {
 
 dependencies {
 
+    // Androidx
     Deps.Androidx.all.forEach(::implementation)
+
+    // Hilt
+    implementation(Deps.Hilt.hilt)
+    kapt(Deps.Hilt.hiltAnnotation)
+
+    // Unit Tests
     Deps.UnitTest.all.forEach(::testImplementation)
+    Deps.UnitTest.compilers.forEach(::kaptTest)
+
+    // Instrumentation Tests
     Deps.InstrumentationTest.all.forEach(::androidTestImplementation)
+    Deps.InstrumentationTest.compilers.forEach(::kaptAndroidTest)
 }
