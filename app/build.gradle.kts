@@ -47,6 +47,9 @@ dependencies {
     implementation(Deps.Hilt.hilt)
     kapt(Deps.Hilt.hiltAnnotation)
 
+    // Retrofit
+    Deps.Retrofit.all.forEach(::implementation)
+
     // Unit Tests
     Deps.UnitTest.all.forEach(::testImplementation)
     Deps.UnitTest.compilers.forEach(::kaptTest)

@@ -1,5 +1,8 @@
 object Deps {
     const val hiltVer = "2.42"
+    const val retrofitVer = "2.7.1"
+    const val okhttpVer = "4.10.0"
+
 
     object Androidx {
         private const val core = "androidx.core:core-ktx:1.8.0"
@@ -13,6 +16,15 @@ object Deps {
     object Hilt {
         const val hilt = "com.google.dagger:hilt-android:$hiltVer"
         const val hiltAnnotation = "com.google.dagger:hilt-android:$hiltVer"
+    }
+
+    object Retrofit {
+        private const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVer"
+        private const val moshi = "com.squareup.retrofit2:converter-moshi:$retrofitVer"
+        private const val okhttp3 = "com.squareup.okhttp3:okhttp:$okhttpVer"
+        private const val interceptor = "com.squareup.okhttp3:logging-interceptor:$okhttpVer"
+
+        val all = listOf(retrofit, moshi, okhttp3, interceptor)
     }
 
     object UnitTest {
