@@ -55,3 +55,7 @@ dependencies {
     Deps.InstrumentationTest.all.forEach(::androidTestImplementation)
     Deps.InstrumentationTest.compilers.forEach(::kaptAndroidTest)
 }
+
+kapt {
+    correctErrorTypes = true
+}
