@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "friendlylamp"
-include ':app'
+include (":app")
