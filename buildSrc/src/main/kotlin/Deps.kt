@@ -27,6 +27,10 @@ object Deps {
         val all = listOf(retrofit, moshi, okhttp3, interceptor)
     }
 
+    object Arrow {
+        const val arrow = "io.arrow-kt:arrow-core:1.0.1"
+    }
+
     object UnitTest {
         private const val junit = "junit:junit:4.13.2"
         private const val hiltUnit = "com.google.dagger:hilt-android-testing:$hiltVer"

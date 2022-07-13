@@ -50,6 +50,9 @@ dependencies {
     // Retrofit
     Deps.Retrofit.all.forEach(::implementation)
 
+    //Arrow
+    implementation(Deps.Arrow.arrow)
+
     // Unit Tests
     Deps.UnitTest.all.forEach(::testImplementation)
     Deps.UnitTest.compilers.forEach(::kaptTest)
