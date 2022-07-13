@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 
-class ConnectivityUtil {
+object ConnectivityUtil {
     /**
      * To check if devices has an active internet connection or not.
      *
