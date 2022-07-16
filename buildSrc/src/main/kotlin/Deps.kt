@@ -20,7 +20,7 @@ object Deps {
 
     object Retrofit {
         private const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVer"
-        private const val moshi = "com.squareup.retrofit2:converter-moshi:$retrofitVer"
+        private const val moshi = "com.squareup.retrofit2:converter-gson:$retrofitVer"
         private const val okhttp3 = "com.squareup.okhttp3:okhttp:$okhttpVer"
         private const val interceptor = "com.squareup.okhttp3:logging-interceptor:$okhttpVer"
 
